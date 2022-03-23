@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "25027630015",
+    "project_id": "uberappjavakotlin",
+    "storage_bucket": "uberappjavakotlin.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:25027630015:android:c70208a5abc3ec0002c70a",
+        "android_client_info": {
+          "package_name": "com.doubleclick.uberappjavakotlin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "25027630015-iu8a8r863geks8mniq7ce4lheueqcblg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAE-yW8oM_SkyV9twHvo_gD-5H8NPkdrF4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "25027630015-iu8a8r863geks8mniq7ce4lheueqcblg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
