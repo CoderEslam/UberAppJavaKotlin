@@ -8,7 +8,7 @@
 
     <fragment
         android:id="@+id/signInFragment"
-        android:name="com.doubleclick.uberappjavakotlin.SignInFragment"
+        android:name="com.doubleclick.uberappjavakotlin.ui.Fragments.SignInFragment"
         android:label="SignInFragment"
         tools:layout="@layout/fragment_sign_in">
 
@@ -19,10 +19,18 @@
             app:exitAnim="@anim/righttoleft"
             app:popEnterAnim="@anim/lefttoright"
             app:popExitAnim="@anim/righttoleft" />
+        <action
+            android:id="@+id/action_signInFragment_to_forgetpassword2"
+            app:destination="@id/forgetpassword"
+            app:enterAnim="@anim/lefttoright"
+            app:exitAnim="@anim/righttoleft"
+            app:popEnterAnim="@anim/lefttoright"
+            app:popExitAnim="@anim/righttoleft"/>
+
     </fragment>
     <fragment
         android:id="@+id/signUpFragment"
-        android:name="com.doubleclick.uberappjavakotlin.SignUpFragment"
+        android:name="com.doubleclick.uberappjavakotlin.ui.Fragments.SignUpFragment"
         android:label="SignUpFragment"
         tools:layout="@layout/fragment_signup">
         <action
@@ -32,5 +40,13 @@
             app:exitAnim="@anim/righttoleft"
             app:popEnterAnim="@anim/lefttoright"
             app:popExitAnim="@anim/righttoleft" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/forgetpassword"
+        android:name="com.doubleclick.uberappjavakotlin.ui.Fragments.ForgetPasswordFragment"
+        android:label="SignUpFragment"
+        tools:layout="@layout/fragment_forget_password">
+
     </fragment>
 </navigation>

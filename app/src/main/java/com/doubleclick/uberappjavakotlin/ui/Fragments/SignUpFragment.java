@@ -1,7 +1,10 @@
-package com.doubleclick.uberappjavakotlin;
+package com.doubleclick.uberappjavakotlin.ui.Fragments;
+
+import static com.doubleclick.uberappjavakotlin.Model.Constant.USER;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.Navigation;
 
@@ -10,13 +13,20 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.doubleclick.uberappjavakotlin.R;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.messaging.FirebaseMessaging;
 
+import java.util.HashMap;
 import java.util.Objects;
 
-public class SignUpFragment extends Fragment {
+public class SignUpFragment extends BaseFragment {
 
 
     private LottieAnimationView animationView;
@@ -59,8 +69,30 @@ public class SignUpFragment extends Fragment {
     }
 
     private void Login(String name, String email, String password) {
+        mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if (task.isSuccessful()){
+                    HashMap<String,Object> map = new HashMap<>();
+                    map.put("name",name);
+                    map.put("email",email);
+                    map.put("password",password);
+                    map.put("id",myId);
+                    map.put("image","");
+                    FirebaseMessaging.getInstance().getToken().addOnCompleteListener(new OnCompleteListener<String>() {
+                        @Override
+                        public void onComplete(@NonNull Task<String> task) {
+                            map.put("token",task.getResult());
+                            reference.child(USER).child(myId).setValue(map);
+                            Toast.makeText(getActivity(), "Done", Toast.LENGTH_SHORT).show();
+                        }
+                    });
 
-
+                }
+            }
+        });
 
     }
+
+
 }

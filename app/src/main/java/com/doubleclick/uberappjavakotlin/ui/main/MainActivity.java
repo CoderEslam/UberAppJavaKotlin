@@ -1,8 +1,10 @@
-package com.doubleclick.uberappjavakotlin;
+package com.doubleclick.uberappjavakotlin.ui.main;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+
+import com.doubleclick.uberappjavakotlin.R;
 
 public class MainActivity extends AppCompatActivity {
 
