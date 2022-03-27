@@ -1,5 +1,6 @@
 package com.doubleclick.uberappjavakotlin.ui.Fragments;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -15,6 +16,8 @@ import android.widget.Toast;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.doubleclick.uberappjavakotlin.R;
+import com.doubleclick.uberappjavakotlin.ui.main.MainActivity;
+import com.doubleclick.uberappjavakotlin.ui.main.MapsActivity;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
@@ -72,7 +75,7 @@ public class SignInFragment extends BaseFragment {
         donthaveacconnt.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Navigation.findNavController(requireActivity(),R.id.main_fragment).navigate(SignInFragmentDirections.actionSignInFragmentToSignUpFragment());
+                Navigation.findNavController(requireActivity(), R.id.main_fragment).navigate(SignInFragmentDirections.actionSignInFragmentToSignUpFragment());
             }
         });
 
@@ -81,17 +84,18 @@ public class SignInFragment extends BaseFragment {
         });
 
         forgetpassword.setOnClickListener(v -> {
-            Navigation.findNavController(requireActivity(),R.id.main_fragment).navigate(SignInFragmentDirections.actionSignInFragmentToForgetpassword2());
+            Navigation.findNavController(requireActivity(), R.id.main_fragment).navigate(SignInFragmentDirections.actionSignInFragmentToForgetpassword2());
         });
         return view;
     }
 
     private void SignIn(String email, String password) {
-
         mAuth.signInWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                Toast.makeText(getActivity(), "Done", Toast.LENGTH_SHORT).show();
+                if (task.isSuccessful()) {
+                    startActivity(new Intent(getContext(), MapsActivity.class));
+                }
             }
         });
 

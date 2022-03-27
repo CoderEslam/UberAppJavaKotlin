@@ -3,7 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/Users/eslam/AndroidStudioProjects/Eslam/UberAppJavaKotlin/app/src/main/res/layout/activity_main.xml" value="0.22" />
+        <entry key="..\:/Users/eslam/AndroidStudioProjects/Eslam/UberAppJavaKotlin/app/src/main/res/drawable/ic_launcher_background.xml" value="0.149" />
+        <entry key="..\:/Users/eslam/AndroidStudioProjects/Eslam/UberAppJavaKotlin/app/src/main/res/layout/activity_main.xml" value="0.18" />
+        <entry key="..\:/Users/eslam/AndroidStudioProjects/Eslam/UberAppJavaKotlin/app/src/main/res/layout/activity_maps.xml" value="0.15" />
+        <entry key="..\:/Users/eslam/AndroidStudioProjects/Eslam/UberAppJavaKotlin/app/src/main/res/layout/activity_splach.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/eslam/AndroidStudioProjects/Eslam/UberAppJavaKotlin/app/src/main/res/layout/fragment_blank.xml" value="0.17760416666666667" />
         <entry key="..\:/Users/eslam/AndroidStudioProjects/Eslam/UberAppJavaKotlin/app/src/main/res/layout/fragment_forget_password.xml" value="0.178743961352657" />
         <entry key="..\:/Users/eslam/AndroidStudioProjects/Eslam/UberAppJavaKotlin/app/src/main/res/layout/fragment_login.xml" value="0.19166666666666668" />

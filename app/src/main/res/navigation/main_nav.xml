@@ -25,7 +25,7 @@
             app:enterAnim="@anim/lefttoright"
             app:exitAnim="@anim/righttoleft"
             app:popEnterAnim="@anim/lefttoright"
-            app:popExitAnim="@anim/righttoleft"/>
+            app:popExitAnim="@anim/righttoleft" />
 
     </fragment>
     <fragment

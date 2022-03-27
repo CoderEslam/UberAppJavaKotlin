@@ -30,7 +30,7 @@ public class SignUpFragment extends BaseFragment {
 
 
     private LottieAnimationView animationView;
-    private TextInputEditText name,email,password;
+    private TextInputEditText name, email, password;
     private Button login;
     private TextView haveAccount;
 
@@ -59,7 +59,7 @@ public class SignUpFragment extends BaseFragment {
         login = view.findViewById(R.id.Login);
         haveAccount = view.findViewById(R.id.haveAccount);
         haveAccount.setOnClickListener(v -> {
-            Navigation.findNavController(getActivity(),R.id.main_fragment).navigate(SignUpFragmentDirections.actionSignUpFragment2ToSignInFragment());
+            Navigation.findNavController(getActivity(), R.id.main_fragment).navigate(SignUpFragmentDirections.actionSignUpFragment2ToSignInFragment());
         });
         login.setOnClickListener(v -> {
             Login(Objects.requireNonNull(name.getText()).toString(), Objects.requireNonNull(email.getText()).toString(), Objects.requireNonNull(password.getText()).toString());
@@ -69,20 +69,24 @@ public class SignUpFragment extends BaseFragment {
     }
 
     private void Login(String name, String email, String password) {
+//        user.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
+//            @Override
+//            public void onComplete(@NonNull Task<Void> task) {
+//                if (task.isSuccessful()) {
         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful()){
-                    HashMap<String,Object> map = new HashMap<>();
-                    map.put("name",name);
-                    map.put("email",email);
-                    map.put("password",password);
-                    map.put("id",myId);
-                    map.put("image","");
+                if (task.isSuccessful()) {
+                    HashMap<String, Object> map = new HashMap<>();
+                    map.put("name", name);
+                    map.put("email", email);
+                    map.put("password", password);
+                    map.put("id", myId);
+                    map.put("image", "");
                     FirebaseMessaging.getInstance().getToken().addOnCompleteListener(new OnCompleteListener<String>() {
                         @Override
                         public void onComplete(@NonNull Task<String> task) {
-                            map.put("token",task.getResult());
+                            map.put("token", task.getResult());
                             reference.child(USER).child(myId).setValue(map);
                             Toast.makeText(getActivity(), "Done", Toast.LENGTH_SHORT).show();
                         }
@@ -91,8 +95,8 @@ public class SignUpFragment extends BaseFragment {
                 }
             }
         });
-
+//                }
+//            }
+//        });
     }
-
-
 }
