@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/mapsFragment"
+        android:contentDescription="Maps"
+        android:icon="@drawable/home_"
+        android:title="Maps" />
+
+    <item
+        android:id="@+id/profileFragment"
+        android:contentDescription="Profile"
+        android:icon="@drawable/home_"
+        android:title="Profile" />
+
+
+
+</menu>

@@ -11,4 +11,5 @@
     <string name="for_get_password"><u>For get password</u></string>
     <string name="title_activity_maps">MapsActivity</string>
     <string name="api_key_map">AIzaSyALBMrzXjuXEg9RZEGl4fwTMCvMcw8bGhE</string>
+    <string name="ellipsis">&#8230;</string>
 </resources>
