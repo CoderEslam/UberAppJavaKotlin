@@ -8,7 +8,6 @@
     <fragment
         android:id="@+id/mapsFragment"
         android:name="com.doubleclick.uberappjavakotlin.ui.main.MapsFragment"
-        android:label="fragment_maps"
         tools:layout="@layout/fragment_maps" >
         <action
             android:id="@+id/action_mapsFragment_to_profileFragment"
@@ -17,7 +16,6 @@
     <fragment
         android:id="@+id/profileFragment"
         android:name="com.doubleclick.uberappjavakotlin.ui.Fragments.ProfileFragment"
-        android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" >
 
     </fragment>

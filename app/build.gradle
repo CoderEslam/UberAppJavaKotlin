@@ -53,4 +53,12 @@ dependencies {
 
     def lottieVersion = "3.4.0"
     implementation "com.airbnb.android:lottie:$lottieVersion"
+
+    implementation 'com.google.android.gms:play-services-location:17.0.0'
+    //https://github.com/firebase/geofire-android
+//    implementation 'com.firebase:geofire-java:3.0.0'
+
+    // to ask premissions
+    implementation 'com.karumi:dexter:6.2.3'
+
 }
