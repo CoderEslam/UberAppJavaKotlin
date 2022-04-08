@@ -24,7 +24,6 @@ public class BaseApplication extends Application {
         super.onCreate();
         context = getApplicationContext();
 
-
         Dexter.withContext(context)
                 .withPermissions(
                         Manifest.permission.INTERNET,
