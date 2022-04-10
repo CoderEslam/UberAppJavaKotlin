@@ -3,7 +3,9 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/eslam/AndroidStudioProjects/Eslam/UberAppJavaKotlin/app/src/main/res/drawable/ic_arrow_back_white_24dp.xml" value="0.171" />
         <entry key="..\:/Users/eslam/AndroidStudioProjects/Eslam/UberAppJavaKotlin/app/src/main/res/drawable/ic_launcher_background.xml" value="0.149" />
+        <entry key="..\:/Users/eslam/AndroidStudioProjects/Eslam/UberAppJavaKotlin/app/src/main/res/layout/activity_immersive.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/eslam/AndroidStudioProjects/Eslam/UberAppJavaKotlin/app/src/main/res/layout/activity_main.xml" value="0.18" />
         <entry key="..\:/Users/eslam/AndroidStudioProjects/Eslam/UberAppJavaKotlin/app/src/main/res/layout/activity_maps.xml" value="0.2" />
         <entry key="..\:/Users/eslam/AndroidStudioProjects/Eslam/UberAppJavaKotlin/app/src/main/res/layout/activity_splach.xml" value="0.19166666666666668" />
@@ -11,10 +13,12 @@
         <entry key="..\:/Users/eslam/AndroidStudioProjects/Eslam/UberAppJavaKotlin/app/src/main/res/layout/fragment_forget_password.xml" value="0.178743961352657" />
         <entry key="..\:/Users/eslam/AndroidStudioProjects/Eslam/UberAppJavaKotlin/app/src/main/res/layout/fragment_login.xml" value="0.19166666666666668" />
         <entry key="..\:/Users/eslam/AndroidStudioProjects/Eslam/UberAppJavaKotlin/app/src/main/res/layout/fragment_maps.xml" value="0.19166666666666668" />
-        <entry key="..\:/Users/eslam/AndroidStudioProjects/Eslam/UberAppJavaKotlin/app/src/main/res/layout/fragment_profile.xml" value="0.67" />
+        <entry key="..\:/Users/eslam/AndroidStudioProjects/Eslam/UberAppJavaKotlin/app/src/main/res/layout/fragment_profile.xml" value="0.22" />
         <entry key="..\:/Users/eslam/AndroidStudioProjects/Eslam/UberAppJavaKotlin/app/src/main/res/layout/fragment_sign_in.xml" value="0.22" />
         <entry key="..\:/Users/eslam/AndroidStudioProjects/Eslam/UberAppJavaKotlin/app/src/main/res/layout/fragment_sign_up.xml" value="0.2" />
         <entry key="..\:/Users/eslam/AndroidStudioProjects/Eslam/UberAppJavaKotlin/app/src/main/res/layout/fragment_signup.xml" value="0.22" />
+        <entry key="..\:/Users/eslam/AndroidStudioProjects/Eslam/UberAppJavaKotlin/app/src/main/res/layout/layout_edit.xml" value="0.22" />
+        <entry key="..\:/Users/eslam/AndroidStudioProjects/Eslam/UberAppJavaKotlin/app/src/main/res/menu/main_menu.xml" value="0.33" />
         <entry key="..\:/Users/eslam/AndroidStudioProjects/Eslam/UberAppJavaKotlin/app/src/main/res/menu/menu_bottom.xml" value="0.19166666666666668" />
       </map>
     </option>

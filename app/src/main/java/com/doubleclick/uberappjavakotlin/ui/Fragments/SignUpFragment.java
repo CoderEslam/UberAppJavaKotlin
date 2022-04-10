@@ -21,6 +21,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
 import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.messaging.FirebaseMessaging;
 
 import java.util.HashMap;
@@ -77,17 +78,18 @@ public class SignUpFragment extends BaseFragment {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
+                    String id = FirebaseAuth.getInstance().getCurrentUser().getUid().toString();
                     HashMap<String, Object> map = new HashMap<>();
                     map.put("name", name);
                     map.put("email", email);
                     map.put("password", password);
-                    map.put("id", myId);
+                    map.put("id", id);
                     map.put("image", "");
                     FirebaseMessaging.getInstance().getToken().addOnCompleteListener(new OnCompleteListener<String>() {
                         @Override
                         public void onComplete(@NonNull Task<String> task) {
                             map.put("token", task.getResult());
-                            reference.child(USER).child(myId).setValue(map);
+                            reference.child(USER).child(id).setValue(map);
                             Toast.makeText(getActivity(), "Done", Toast.LENGTH_SHORT).show();
                         }
                     });

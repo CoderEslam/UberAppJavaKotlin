@@ -28,8 +28,8 @@ public class SplachActivity extends AppCompatActivity {
 //        webView.loadUrl("https://www.tutorialspoint.com/android/index.htm");
 //        webView.loadUrl("file:///android_asset/index.html");
 
-        MediaPlayer player = MediaPlayer.create(SplachActivity.this, R.raw.hobk);
-        player.start();
+//        MediaPlayer player = MediaPlayer.create(SplachActivity.this, R.raw.hobk);
+//        player.start();
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
